@@ -17,3 +17,24 @@ int main() {
 
     return 0;
 }
+
+
+//que 2 Set Bits Without Using Arithmetic Operations. Implement a function that sets the first n bits of a byte to 1.
+
+
+#include <stdio.h>
+
+unsigned char setFirstNBits(int n) {
+    unsigned char result = 0;
+    while (n--) {
+        result = (result << 1) | 1;
+    }
+    return result;
+}
+
+int main() {
+    int n = 4;
+    unsigned char result = setFirstNBits(n);
+    printf("Result: %d\n", result);
+    return 0;
+}
