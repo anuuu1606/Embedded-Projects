@@ -55,3 +55,22 @@ int main() {
         printf("%u is not a power of two\n", num);
     return 0;
 }
+
+//que 4 Count Set Bits. Design a function that counts the number of set bits (1s) in an integer without looping.
+
+#include <stdio.h>
+
+int countSetBits(unsigned int num) {
+    int count = 0;
+    while (num) {
+        count += num & 1;
+        num >>= 1;
+    }
+    return count;
+}
+
+int main() {
+    unsigned int num = 29;
+    printf("Set bits: %d\n", countSetBits(num));
+    return 0;
+}
