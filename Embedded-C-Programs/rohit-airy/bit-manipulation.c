@@ -74,3 +74,27 @@ int main() {
     printf("Set bits: %d\n", countSetBits(num));
     return 0;
 }
+
+//que 5 Swap Odd and Even Bits. Implement a function to swap odd and even bits in an integer
+
+#include <stdio.h>
+
+unsigned int swapOddEvenBits(unsigned int num) {
+    unsigned int evenBits = num & 0x55555555;
+    unsigned int oddBits  = num & 0xAAAAAAAA;
+
+    evenBits = evenBits << 1;
+    oddBits  = oddBits >> 1;
+
+    return evenBits | oddBits;
+}
+
+int main() {
+    unsigned int num = 23;
+    printf("Before: %u\n", num);
+
+    unsigned int result = swapOddEvenBits(num);
+    printf("After:  %u\n", result);
+
+    return 0;
+}
