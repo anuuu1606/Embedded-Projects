@@ -38,3 +38,20 @@ int main() {
     printf("Result: %d\n", result);
     return 0;
 }
+
+// que 3 Detecting Power of Two. Write a program to check if a given number is a power oftwo using bit manipulation.
+
+#include <stdio.h>
+
+int isPowerOfTwo(unsigned int num) {
+    return num && !(num & (num - 1));
+}
+
+int main() {
+    unsigned int num = 16;
+    if (isPowerOfTwo(num))
+        printf("%u is a power of two\n", num);
+    else
+        printf("%u is not a power of two\n", num);
+    return 0;
+}
