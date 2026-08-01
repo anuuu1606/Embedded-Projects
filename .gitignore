@@ -1,0 +1,17 @@
+# Build outputs
+/Debug/
+/Release/
+/*.elf
+/*.bin
+/*.hex
+/*.map
+
+# Eclipse / CubeIDE workspace files
+/.settings/
+/.project
+/.cproject
+/.mxproject
+
+# OS generated files
+.DS_Store
+Thumbs.db
